@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
 		"email": arbolParseado2[4].text.trim()
 	};	
 	
-	res.send("Jason del texto con guiones:</br>" + JSON.stringify(jason) + "</br></br>Jason del texto sin guiones:</br>" + JSON.stringify(jason2));
+	res.send("Json del texto con guiones:</br>" + JSON.stringify(jason) + "</br></br>Json del texto sin guiones:</br>" + JSON.stringify(jason2));
 })
 
 var server = app.listen(3000, function() {
