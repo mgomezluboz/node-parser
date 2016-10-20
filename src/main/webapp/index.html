@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=en ng-app="tweetsApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Tweet finder</title>
+
+	<!-- Angular -->
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/lodash/lodash.js"></script>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<!-- Material Design Bootstrap -->
+	<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+	<!-- Scripts -->
+	<script src="app/app.js"></script>
+	<script src="app/service.js"></script>
+	<script src="app/tweetsCtrl.js"></script>
+
+</head>
+
+<body ng-controller="TweetsCtrl as tCtrl">
+
+	<div>
+
+		<h3>Buscador</h3>
+		<div>
+			<input type="text" id="textoBusqueda" placeholder="Texto a buscar..." max="50" ng-model="tCtrl.busqueda">
+			<button type="button" id="buscarTweets" class="btn btn-primary" ng-click="tCtrl.getTweets()">Buscar tweets relacionados</button>
+		</div>
+
+		<div>
+			<table class="table table-striped table-hover">
+				<tr>
+					<th>Usuario</th>
+					<th>Tweet</th>
+					<th>Fecha</th>
+					<th>Numero de retweets</th>
+				</tr>
+				<tr ng-repeat="tweet in tweets">
+					<td>@{{tweet.screenName}} - {{tweet.user}}</td>
+					<td>{{tweet.contenido}}</td>
+					<td>{{tweet.fechaDeCreacion}}</td>
+					<td>{{tweet.retweets}}</td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+
+	<!-- SCRIPTS -->
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery-2.2.3.min.js"></script>
+
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="node_modules/mdbootstrap/js/tether.min.js"></script>
+
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+
+</body>
+</html>
