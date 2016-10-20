@@ -1,7 +1,3 @@
-# Trabajo Práctico - Diseño de Sistemas - 2016
+﻿# Tweet finder
 
-## Grupo: Escorpion-2016
-
-Master status: [![Build Status](https://travis-ci.com/dds-utn/2016-mn-group-10.svg?token=1rRmtZ1js2PVwqHh8aph&branch=master)](https://travis-ci.com/dds-utn/2016-mn-group-10)
-
-Development status: [![Build Status](https://travis-ci.com/dds-utn/2016-mn-group-10.svg?token=1rRmtZ1js2PVwqHh8aph&branch=developement)](https://travis-ci.com/dds-utn/2016-mn-group-10)
+Aplicacion que corre un servidor al que puedo conectarme a traves del browser y me permite encontrar tweets relacionados a un texto de busqueda.
